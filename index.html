@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<title>三翼工作室招募令</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+	</head>
+
+	<body>
+		<div id="box">
+			<div class="title">
+				三翼工作室招募令
+			</div>
+			<form action="insert.php" method="post">
+				<div class="faReform">
+					<div class="reformbg">
+
+					</div>
+					<div class="reform">
+						<div id="repeat">
+							<div id="putText">
+								姓名
+							</div>
+							<input type="text" id="name" name="name" />
+						</div>
+						<div id="repeat">
+							<div id="putSex">
+								性别
+							</div>
+							<div class="sexRadio">
+								<label class="radio">男<input type="radio" name="sex" id="sex" class="male" value="男"/><i></i></label>
+							</div>
+							<div class="sexRadio">
+								<label class="radio">女<input type="radio" name="sex" id="sex" class="female" value="女"/><i></i></label>
+							</div>
+						</div>
+						<div id="repeat">
+							<div id="putText">
+								手机
+							</div>
+							<input type="text" id="tel" name="tel" />
+						</div>
+						<div id="repeat">
+							<div id="putText">
+								Q Q
+							</div>
+							<input type="text" id="qq" name="qq" />
+						</div>
+						<div id="repeat">
+							<div id="putText">
+								院系
+							</div>
+							<!--<input type="text" id="yuan" name="yuan" />-->
+							<select name="yuan" id="yuan">
+								<option value="" disabled selected style='display:none;'>选 择 你 的 院 系</option>
+								<option value="土力院">土力院</option>
+								<option value="商学院">商学院</option>
+								<option value="马克思主义学院">马克思主义学院</option>
+								<option value="机械院">机械院</option>
+								<option value="兴湘学院">兴湘学院</option>
+								<option value="国际交流学院">国际交流学院</option>
+								<option value="环资院">环资院</option>
+								<option value="外国语学院">外国语学院</option>
+								<option value="法学知产信管院">法学知产信管院</option>
+								<option value="化学院">化学院</option>
+								<option value="数学与计算科学学院">数学与计算科学学院</option>
+								<option value="公管院">公管院</option>
+								<option value="化工学院">化工学院</option>
+								<option value="碧泉书院">碧泉书院</option>
+								<option value="信工院">信工院</option>
+								<option value="文学与新闻学院">文学与新闻学院</option>
+								<option value="艺术学院">艺术学院</option>
+								<option value="物理院">物理院</option>
+							</select>
+						</div>
+						<div id="repeat">
+							<div id="putText">
+								专业
+							</div>
+							<input type="text" id="class" name="class" />
+						</div>
+						<div id="repeatMd1">
+							<select name="md1" id="md1">
+								<option value="">第 一 志 愿</option>
+								<option value="产品经理组">产品经理组</option>
+								<option value="产品运营部">产品运营部</option>
+								<option value="多媒体事业部">多媒体事业部</option>
+								<option value="技术开发部">技术开发部</option>
+								<option value="企划公关部">企划公关部</option>
+								<option value="设计部">设计部</option>
+								<option value="通讯社">通讯社</option>
+								<option value="新媒体运营部">新媒体运营部</option>
+								<option value="行政人事部">行政人事部</option>
+							</select>
+						</div>
+						<div id="repeatMd2">
+							<select name="md2" id="md2">
+								<option value="">第 二 志 愿</option>
+								<option value="产品经理组">产品经理组</option>
+								<option value="产品运营部">产品运营部</option>
+								<option value="多媒体事业部">多媒体事业部</option>
+								<option value="技术开发部">技术开发部</option>
+								<option value="企划公关部">企划公关部</option>
+								<option value="设计部">设计部</option>
+								<option value="通讯社">通讯社</option>
+								<option value="新媒体运营部">新媒体运营部</option>
+								<option value="行政人事部">行政人事部</option>
+							</select>
+						</div>
+						<div id="repeatMd3">
+							<select name="md3" id="md3">
+								<option value="">第 三 志 愿</option>
+								<option value="产品经理组">产品经理组</option>
+								<option value="产品运营部">产品运营部</option>
+								<option value="多媒体事业部">多媒体事业部</option>
+								<option value="技术开发部">技术开发部</option>
+								<option value="企划公关部">企划公关部</option>
+								<option value="设计部">设计部</option>
+								<option value="通讯社">通讯社</option>
+								<option value="新媒体运营部">新媒体运营部</option>
+								<option value="行政人事部">行政人事部</option>
+							</select>
+						</div>
+						<div id="intro">
+							<textarea name="trod" id="trod" placeholder="用一句话来介绍你自己吧！"></textarea>
+						</div>
+						<div id="cardTip">
+							与小伙伴一起报名可获丰厚奖励哟～（以下内容为选填项）
+						</div>
+						<div id="cardPart">
+							<div id="cPutText">
+								小 金 卡 号
+							</div>
+							<input type="text" name="cardID" id="cardID" />
+						</div>
+						<div id="cardPart">
+							<div id="cPutText">
+								小伙伴姓名
+							</div>
+							<input type="text" name="companyName" id="cardID" />
+						</div>
+						<div id="cardPart">
+							<div id="cPutText">
+								小伙伴卡号
+							</div>
+							<input type="text" name="companyCardID" id="cardID" />
+						</div>
+					</div>
+					<input type="submit" value="报名" id="sign" onclick="return checkForm()" />
+					<p id="blank"></p>
+				</div>
+
+			</form>
+		</div>
+
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript">
+			let name = document.getElementById('name')
+			//			let sex = document.getElementById('sex')
+			let tel = document.getElementById('tel')
+			let qq = document.getElementById('qq')
+			let yuan = document.getElementById('yuan')
+			let classs = document.getElementById('class')
+			let md1 = document.getElementById('md1')
+			let trod = document.getElementById('trod')
+
+			function checkForm() {
+				if(name.value == '' && tel.value == '' && qq.value == '' && yuan.value == '' && classs.value == '' && md1.value == '' && trod.value == '') {
+					alert("请填写报名表！")
+					return(false)
+				}
+				if(name.value == '') {
+					alert("请输入您的姓名")
+					return(false)
+				}
+				var item1 = $('input:radio[name=sex]:checked').val();
+				if(item1 == null) {
+					alert('请选择你的性别');
+					return(false)
+				}
+				if(tel.value.length != 11) {
+					alert("请正确输入您的电话号码")
+					return(false)
+				}
+				if(qq.value == '') {
+					alert("请输入您的QQ号")
+					return(false)
+				}
+				if(yuan.value == '') {
+					alert("请选择您的院系")
+					return(false)
+				}
+				if(classs.value == '') {
+					alert("请输入您的专业")
+					return(false)
+				}
+				if(md1.value == '') {
+					alert("请至少选择一个志愿作为第一志愿")
+					return(false)
+				}
+				if(trod.value == '') {
+					alert("向我做个自我介绍呗")
+					return(false)
+				} else if(trod.value.length <= 3) {
+					alert("水货，字太少啦，至少四个字哦")
+					return(false)
+				}
+			}
+
+			//			function getInsideArr() {
+			//				var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+			//				var h = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+			//				document.getElementById("box").style.width = w + "px";
+			//				document.getElementById("box").style.height = h + "px";
+			//			};
+
+			(function(width) {
+				var doc = width.document,
+					element = doc.documentElement,
+					i = 640,
+					d = i / 100,
+					o = "orientationchange" in width ? "orientationchange" : "resize",
+					a = function() {
+						var width = element.clientWidth || 320;
+						width > 640 && (width = 640);
+						element.style.fontSize = width / d + "px"
+					};
+				doc.addEventListener && (width.addEventListener(o, a, !1), doc.addEventListener("DOMContentLoaded", a, !1))
+			})(window);
+
+			$(function() {
+				//获取网页中所有的form表单
+				$("form").each(function() {
+					//注册表单的提交事件
+					$(this).submit(function(event) {
+						//屏蔽表单的注册
+						event.preventDefault();
+						//获取url
+						var url = "http://112.74.52.117/zgf_zs/form/insert.php";
+
+						request(url,
+							'POST',
+							JSON.stringify($(this).serializeObject()),
+							//							function() {
+							//								alert('报名成功');
+							//							},
+							null);
+					});
+				});
+
+			});
+
+			//将$.ajax函数 转化成一个简单的接口
+			function request(url, method, param, callback, fail) {
+				//alert(param);
+				$.ajax({
+					type: method,
+					//async:false,
+					contentType: "application/json;charset=UTF-8",
+					dataType: "json",
+					url: url,
+					data: param,
+					success: function(data) {
+						console.log(data);
+						console.log(data.message);
+						if(data.code == 0) {
+							alert("报名表提交成功！");
+							window.location.href = "inquiry.html";
+							//								sessionStorage.obj = JSON.stringify(data);
+							//								console.log(sessionStorage.obj);
+						} else if(data.code == 1) {
+							alert("报名表提交失败,数据库操作有误，请联系技术人员！");
+							window.location.reload();
+						} else if(data.code == 2) {
+							alert("报名表提交失败,请求错误，请联系技术人员！");
+							window.location.reload();
+						} else if(data.code == 3) {
+							alert("报名表提交失败,参数缺失，请联系技术人员！");
+							window.location.reload();
+						} else if(data.code == 4) {
+							alert("已经报过名啦，不要重复报名哦！");
+							window.location.reload();
+						}
+					},
+					error: fail,
+				});
+			}
+
+			//将form表单里面的数据转化为json对象
+			$.fn.serializeObject = function() {
+				var o = {};
+				var a = this.serializeArray();
+				$.each(a, function() {
+					if(o[this.name] !== undefined) {
+						if(!o[this.name].push) {
+							o[this.name] = [o[this.name]];
+						}
+						o[this.name].push(this.value || '');
+					} else {
+						o[this.name] = this.value || '';
+					}
+				});
+				return o;
+			};
+
+			function handleResult() {
+				if(XMLHttpRequest.readyState == 4 && XMLHttpRequest.status == 200) {
+					var responseText = XMLHttpRequest.responseText;
+					var jsonn = eval('(' + response + ')');
+					var code = jsonn.code;
+					if(code == 0) {
+						alert("报名表提交成功！");
+					} else if(code == 1) {
+						alert("报名表提交失败,数据库操作有误，请联系技术人员！");
+					} else if(code == 2) {
+						alert("报名表提交失败,请求错误，请联系技术人员！");
+					} else if(code == 3) {
+						alert("报名表提交失败,参数缺失，请联系技术人员！");
+					}
+				}
+			}
+		</script>
+	</body>
+
+</html>

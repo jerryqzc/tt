@@ -1,0 +1,154 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	/*font-family: MFLiHei_Noncommercial-Regular;*/
+}
+
+body {
+	background: url(../img/status_bg.png) no-repeat center center;
+	background-size: cover;
+	background-attachment: fixed;
+	background-color: #CCCCCC;
+	-webkit-touch-callout: none;
+	/*系统默认菜单被禁用*/
+	-webkit-user-select: none;
+	/*webkit浏览器*/
+	-khtml-user-select: none;
+	/*早期浏览器*/
+	-moz-user-select: none;
+	/*火狐浏览器*/
+	-ms-user-select: none;
+	/*IE浏览器*/
+	user-select: none;
+	/*用户是否能够选中文本*/
+}
+
+body:before {
+	content: "";
+	background: url(../img/status_bg.png) no-repeat center center;
+	background-size: 122%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: -4;
+}
+
+@font-face {
+	font-family: 'create';
+	src: url(../fonts/create.otf);
+}
+
+@font-face {
+	font-family: 'subs';
+	src: url(../fonts/subs.TTF);
+}
+
+#backButton {
+	width: 100%;
+	height: 10vh;
+	font-size: 45px;
+	/*padding-left: 45px;
+	padding-top: 20px;*/
+	font-family: subs;
+	color: #475C7C;
+}
+
+#backLittle {
+	margin-top: 20px;
+	margin-left: 45px;
+	font-size: 25px;
+}
+
+a {
+	text-decoration: none;
+	color: #475C7C;
+}
+
+a:link {
+	text-decoration: none;
+	color: #475C7C;
+}
+
+a:active: {
+	text-decoration: none;
+	color: #475C7C;
+}
+
+a:visited {
+	text-decoration: none;
+	color: #475C7C;
+}
+
+a:hover {
+	color: #475C7C;
+	text-decoration: none;
+}
+
+#status100,
+#status75,
+#status50,
+#status25 {
+	width: 60%;
+	margin-left: 20%;
+	height: 20vh;
+	line-height: 20vh;
+	font-size: 5vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#status100Img,
+#status100Text,
+#status75Img,
+#status75Text,
+#status50Img,
+#status50Text,
+#status25Img,
+#status25Text {
+	width: 50%;
+	height: 100%;
+	color: white;
+}
+
+#status100Text,
+#status50Text {
+	font-size: 5vw;
+	font-family: create;
+}
+
+#status75Text,
+#status25Text {
+	font-size: 5vw;
+	font-family: create;
+	text-align: right;
+}
+
+#line3 {
+	width: 50%;
+	position: absolute;
+	left: 39vw;
+	top: 23vh;
+	z-index: -1;
+}
+
+#line2 {
+	width: 50%;
+	position: absolute;
+	left: 34vw;
+	top: 44vh;
+	z-index: -1;
+}
+
+#line1 {
+	width: 53%;
+	position: absolute;
+	left: 41vw;
+	top: 64vh;
+	z-index: -1;
+}

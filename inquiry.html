@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/inStyle.css" />
+		<title>录取查询</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+	</head>
+
+	<body>
+		<div id="box">
+			<div class="meteor-body">
+				<div class="main-con">
+					<div class="shooting_star"></div>
+					<div class="shooting_star"></div>
+					<div class="shooting_star"></div>
+					<div class="shooting_star"></div>
+					<div class="shooting_star"></div>
+					<div class="shooting_star"></div>
+					<div class="shooting_star"></div>
+				</div>
+			</div>
+			<div class="inTitle">
+				<div id="breathe-btn">
+
+				</div>
+				<div id="breathe-btn2">
+
+				</div>
+				<div id="breathe-btn3">
+
+				</div>
+				<div class="inText">
+					录取查询
+				</div>
+			</div>
+			<!--<div id="mount">
+				<img src="img/mount.png" width="100%" />
+			</div>-->
+			<div id="water">
+				<img src="img/mount_water.png" width="100%" />
+			</div>
+			<form action="select.php" method="post">
+				<div class="inForm">
+					<div id="inRepeat1">
+						<input type="text" name="name" id="inName" placeholder="姓名" />
+					</div>
+					<div id="inRepeat2">
+						<input type="text" name="tel" id="inTel" placeholder="手机号" />
+					</div>
+					<input type="submit" value="查询" id="iq" onclick="return checkinForm()" />
+				</div>
+
+			</form>
+		</div>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<!--<script type="text/javascript" src="js/anime.min.js"></script>
+		<script type="text/javascript" src="js/particles.js"></script>-->
+		<script type="text/javascript">
+			let name = document.getElementById('inName')
+			//			let sex = document.getElementById('sex')
+			let tel = document.getElementById('inTel')
+
+			function checkinForm() {
+				if(name.value == '' && tel.value == '') {
+					alert("请填写表格！")
+					return(false)
+				}
+				if(name.value == '') {
+					alert("请输入您的姓名")
+					return(false)
+				}
+				if(tel.value.length != 11) {
+					alert("请正确输入您的电话号码")
+					return(false)
+				}
+			}
+			
+			document.body.addEventListener('touchstart', function (){});
+
+			function getInsideArr() {
+				var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+				var h = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+				document.getElementById("box").style.width = w + "px";
+				document.getElementById("box").style.height = h + "px";
+			};
+			//			var element = document.getElementById("box");
+			//			element.scrollIntoView(true)
+
+			$(function() {
+				//获取网页中所有的form表单
+				$("form").each(function() {
+					//注册表单的提交事件
+					$(this).submit(function(event) {
+						//屏蔽表单的注册
+						event.preventDefault();
+						//获取url
+						var url = "http://112.74.52.117/zgf_zs/form/select.php";
+
+						request(url,
+							'POST',
+							JSON.stringify($(this).serializeObject()),
+//							function() {
+//								alert('123');
+//							},
+							null);
+					});
+				});
+
+			});
+
+			//将$.ajax函数 转化成一个简单的接口
+			function request(url, method, param, callback, fail) {
+				//alert(param);
+				$.ajax({
+					type: method,
+					//async:false,
+					contentType: "application/json;charset=UTF-8",
+					dataType: "json",
+					url: url,
+					data: param,
+					success: function(data) {
+						console.log(data);
+						if(data.code == 0){
+							sessionStorage.obj = JSON.stringify(data);
+							console.log(sessionStorage.obj);
+							window.location.href="status.html";
+						} else if(data.code == 1){
+							alert("数据库操作有误！");
+						} else if(data.code == 2){
+							alert("请求错误！");
+						} else if(data.code == 3){
+							alert("参数缺失！");
+						} else if(data.code == 4){
+							alert("查无此人，请确认是否报名");
+						}
+					},
+					error: fail,
+				});
+			}
+
+			//将form表单里面的数据转化为json对象
+			$.fn.serializeObject = function() {
+				var o = {};
+				var a = this.serializeArray();
+				$.each(a, function() {
+					if(o[this.name] !== undefined) {
+						if(!o[this.name].push) {
+							o[this.name] = [o[this.name]];
+						}
+						o[this.name].push(this.value || '');
+					} else {
+						o[this.name] = this.value || '';
+					}
+				});
+				return o;
+			};
+		</script>
+	</body>
+
+</html>

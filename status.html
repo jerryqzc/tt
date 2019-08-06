@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>录取进度</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+		<link rel="stylesheet" type="text/css" href="css/stStyle.css" />
+	</head>
+
+	<body>
+		<div id="backButton">
+			<div id="backLittle">
+				<a href="inquiry.html">
+					<返回</a>
+			</div>
+		</div>
+		<div id="status100">
+			<div id="status100Text">
+				<div id="pt100" style="display: none;">
+					成为翼家人
+				</div>
+			</div>
+			<div id="status100Img">
+				<img src="img/planet100.png" style="height: 95%;margin-left: -5%;" id="p100"/>
+			</div>
+		</div>
+		<div id="line3">
+			<img src="img/l3.png" width="50%" />
+		</div>
+		<div id="status75">
+			<div id="status75Img">
+				<img src="img/planet75.png" style="height: 100%;margin-left:-30% ;float: left;margin-top: -22%;" id="p75"/>
+			</div>
+			<div id="status75Text">
+				<div id="pt75" style="display: none;">
+					通过复试
+				</div>
+			</div>
+		</div>
+		<div id="line2">
+			<img src="img/l2.png" width="50%" />
+		</div>
+		<div id="status50">
+			<div id="status50Text">
+				<div id="pt50" style="display: none;">
+					通过初试&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				</div>
+			</div>
+			<div id="status50Img">
+				<img src="img/planet50.png" style="height: 95%;margin-top: -15%;margin-left: -27%;" id="p50"/>
+			</div>
+		</div>
+		<div id="line1">
+			<img src="img/l1.png" width="53%" />
+		</div>
+		<div id="status25">
+			<div id="status25Img">
+				<img src="img/planet25.png" style="height: 90%;margin-right:-10% ;float: right;" id="p25"/>
+			</div>
+			<div id="status25Text">
+				<div id="pt25" style="display: none;">
+					报名成功
+				</div>
+			</div>
+			<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+			<script type="text/javascript" src="js/jquery.min.js"></script>
+			<script type="text/javascript" src="js/jquery.js"></script>
+		</div>
+		<script type="text/javascript">
+			window.onload = function(data) {
+				var str = sessionStorage.obj;
+				var obj = $.parseJSON(str);
+				var dd = obj.data;
+				console.log(obj);
+				console.log(obj.data);
+				console.log(dd);
+				if(str == null) {
+					window.location.href = 'inquiry.html';
+				} else {
+					if(dd == 1) {
+						document.getElementById("p25").src = 'img/illu25.png';
+						document.getElementById("pt25").style.display = 'block';
+					} else if(dd == 2) {
+
+					} else if(dd == 3) {
+						document.getElementById("p25").src = 'img/illu25.png';
+						document.getElementById("pt25").style.display = 'block';
+						document.getElementById("p50").src = 'img/illu50.png';
+						document.getElementById("pt50").style.display = 'block';
+					} else if(dd == 4) {
+						document.getElementById("p25").src = 'img/illu25.png';
+						document.getElementById("pt25").style.display = 'block';
+						document.getElementById("p50").src = 'img/illu50.png';
+						document.getElementById("pt50").style.display = 'block';
+					} else if(dd == 5) {
+						document.getElementById("p25").src = 'img/illu25.png';
+						document.getElementById("pt25").style.display = 'block';
+						document.getElementById("p50").src = 'img/illu50.png';
+						document.getElementById("pt50").style.display = 'block';
+						document.getElementById("p75").src = 'img/illu75.png';
+						document.getElementById("pt75").style.display = 'block';
+						document.getElementById("p100").src = 'img/illu100.png';
+						document.getElementById("pt100").style.display = 'block';
+					}
+				}
+			}
+		</script>
+	</body>
+
+</html>

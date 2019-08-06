@@ -1,0 +1,411 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	/*font-family: MFLiHei_Noncommercial-Regular;*/
+}
+
+body {
+	background: url(../img/bg.png) no-repeat center center;
+	background-size: cover;
+	background-attachment: fixed;
+	background-color: #CCCCCC;
+	-webkit-touch-callout: none;
+	/*系统默认菜单被禁用*/
+	-webkit-user-select: none;
+	/*webkit浏览器*/
+	-khtml-user-select: none;
+	/*早期浏览器*/
+	-moz-user-select: none;
+	/*火狐浏览器*/
+	-ms-user-select: none;
+	/*IE浏览器*/
+	user-select: none;
+	/*用户是否能够选中文本*/
+}
+
+/*body:before {
+	content: "";
+	background: url(../img/bg.png) no-repeat center center;
+	background-size: 122%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: -2;
+}*/
+
+@font-face {
+	font-family: 'create';
+	src: url(../fonts/create.otf);
+}
+
+@font-face {
+	font-family: 'subs';
+	src: url(../fonts/subs.TTF);
+}
+
+.sun {
+	width: 20%;
+	position: absolute;
+	top: 11vh;
+	right: 5%;
+	z-index: -2;
+}
+
+.sunShadow {
+	width: 20%;
+	position: absolute;
+	bottom: 10%;
+	right: 5%;
+	z-index: -2;
+}
+
+.title {
+	width: 100%;
+	height: 100px;
+	position: absolute;
+	line-height: 100px;
+	font-size: 30px;
+	text-align: center;
+	font-family: create;
+	color: #475c7c;
+}
+
+.faReform {
+	width: 100%;
+	position: absolute;
+	margin-top: 100px;
+}
+
+.reformbg {
+	width: 70%;
+	height: 850px;
+	position: absolute;
+	margin-left: 15%;
+	z-index: -1;
+	filter: alpha(Opacity=30);
+	-moz-opacity: 0.3;
+	opacity: 0.3;
+	opacity: 30%;
+	background-color: #1c3554;
+	border-radius: 18px;
+}
+
+.reform {
+	width: 70%;
+	height: 850px;
+	position: absolute;
+	margin-left: 15%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: subs;
+}
+
+#repeat,
+#cardPart,
+#repeatMd1,
+#repeatMd2,
+#repeatMd3 {
+	width: 80%;
+	height: 4%;
+	/*position: absolute;
+	z-index: 1;*/
+	margin-top: 10px;
+	line-height: 5vw;
+	font-size: 5vw;
+	color: white;
+}
+
+#putText,
+#putSex,
+#cPutText {
+	width: 20%;
+	float: left;
+}
+
+#name,
+#sex,
+#tel,
+#qq,
+#yuan,
+#class,
+#cardID {
+	width: 78%;
+	height: 24px;
+	float: left;
+	background-color: white;
+	border-radius: 50px;
+	border: none;
+	font-size: 13px;
+	text-align: center;
+	color: black;
+	border: 0px;
+	outline: none;
+	font-family: subs;
+}
+
+#yuan {
+	padding-left: 4%;
+	border-radius: 50px;
+	font-family: subs;
+}
+
+.sexRadio {
+	width: 40%;
+	height: 50px;
+	float: left;
+}
+
+#sex {
+	width: 35%;
+	margin-left: 20%;
+	background-color: green;
+}
+
+#yuan {
+	color: grey;
+	text-align: center;
+}
+
+#repeatMd1,
+#repeatMd2,
+#repeatMd3 {
+	height: 3%;
+	/*	margin-top: 50px;*/
+}
+
+#repeatMd2,
+#repeatMd3 {
+	margin-top: 30px;
+}
+
+#md1,
+#md2,
+#md3 {
+	width: 64%;
+	height: 100%;
+	margin-left: 19%;
+	border: none;
+	text-align: center;
+	font-size: 16px;
+	color: grey;
+	border-radius: 30px;
+	padding-left: 4%;
+	background-color: white;
+	font-family: subs;
+	border: 0px;
+	outline: none;
+}
+
+input,
+select {
+	-webkit-user-select: auto;
+	/*webkit浏览器*/
+	user-select: auto;
+	/*用户是否能够选中文本*/
+}
+
+input::-webkit-input-placeholder {
+	text-align: center;
+}
+
+input::-ms-input-placeholder {
+	text-align: center;
+}
+
+input::-moz-placeholder {
+	text-align: center;
+}
+
+select {
+	/*border: solid 1px #000;*/
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	padding-right: 40px;
+	background: url(../img/tri.png) no-repeat scroll right center transparent;
+	background-position-x: 95%;
+}
+
+select::-ms-expand {
+	display: none;
+}
+
+select:invalid {
+	color: red;
+	/*	text-align: center;*/
+}
+
+#intro {
+	width: 100%;
+	height: 14%;
+	margin-top: 30px;
+}
+
+#trod {
+	width: 80%;
+	height: 100%;
+	margin-left: 9%;
+	background-color: white;
+	border: none;
+	border-radius: 30px;
+	font-size: 18px;
+	padding-left: 20px;
+	padding-top: 20px;
+	font-family: subs;
+	border: 0px;
+	outline: none;
+}
+
+#cardTip {
+	width: 75%;
+	height: 50px;
+	margin-top: 38px;
+	text-align: center;
+	font-size: 12px;
+	color: white;
+}
+
+#cardPart {}
+
+#cPutText {
+	width: 55%;
+	text-align: center;
+}
+
+#cardID {
+	width: 45%;
+}
+
+#sign {
+	width: 35%;
+	height: 35px;
+	margin-left: 32.5%;
+	position: relative;
+	margin-top: 865px;
+	border: none;
+	background-color: #ef9cb1;
+	font-size: 24px;
+	border-radius: 50px;
+	box-shadow: 0px 7px 25px #4c6186;
+	font-family: subs;
+	color: white;
+	outline: none;
+}
+
+#blank {
+	width: 100%;
+	height: 50px;
+}
+
+
+/*radio变色*/
+
+.sexRadio {
+	position: relative;
+}
+
+.sexRadio .radio {
+	position: relative;
+	display: inline-block;
+	font-weight: 400;
+	color: white;
+	padding-left: 50px;
+	cursor: pointer;
+}
+
+.sexRadio .radio input {
+	position: absolute;
+	left: -9999px;
+}
+
+.sexRadio .radio i {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 18px;
+	width: 24px;
+	height: 24px;
+	outline: 0;
+	border: 1px solid #e4e4e4;
+	background: #ffffff;
+	border-radius: 50%;
+	transition: border-color .3s;
+	-webkit-transition: border-color .3s;
+}
+
+.sexRadio .radio input+i:after {
+	position: absolute;
+	content: '';
+	top: 0.7px;
+	left: 1.12px;
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+	background-color: #5d99c6;
+	opacity: 0;
+	transition: opacity .1s;
+	-webkit-transition: opacity .1s;
+}
+
+.sexRadio .radio input:checked+i:after {
+	opacity: 1;
+}
+
+
+/*.sexRadio2 {
+	position: relative;
+}
+
+.sexRadio2 .radio {
+	position: relative;
+	display: inline-block;
+	font-weight: 400;
+	color: white;
+	padding-left: 125px;
+	cursor: pointer;
+}
+
+.sexRadio2 .radio input {
+	position: absolute;
+	left: -9999px;
+}
+
+.sexRadio2 .radio i {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 60px;
+	width: 45px;
+	height: 45px;
+	outline: 0;
+	border: 1px solid #e4e4e4;
+	background: #ffffff;
+	border-radius: 50%;
+	transition: border-color .3s;
+	-webkit-transition: border-color .3s;
+}
+
+.sexRadio2 .radio input+i:after {
+	position: absolute;
+	content: '';
+	top: 2px;
+	left: 2.1610px;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: #feb6b7;
+	opacity: 0;
+	transition: opacity .1s;
+	-webkit-transition: opacity .1s;
+}
+
+.sexRadio2 .radio input:checked+i:after {
+	opacity: 1;
+}*/
